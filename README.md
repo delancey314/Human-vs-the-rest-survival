@@ -39,8 +39,11 @@ This will probably end up being the primary dataset for capstone 3 forecasting b
 
 #### BioTIME: 
 'A database of biodiversity time series for the Anthropocene:'   Global Ecology and Biogeography,Volume 27, Issue 7
+Too big to post to git
 
 8,777,413 species abundance records from assemblages consistently sampled at 547,161 unique locations across all realms(terrestrrial, aquatic, etc).  44,440 species covered between 1874 and 2016 with a minimum of two years at the same site for a species. 
+
+### Supplmental Datasets
 
 ####  University of Notre Dame Global Adaptation Index (ND_GAIN)
 This dataset represents  a country’s current vulnerability to climate disruptions and assesses each country' readiness to leverage private and public sector investment for adaptive actions. It is 74 variables to form 45 core indicator to measure vulnerability and readiness of 192 UN countries from 1995 to the present. 
@@ -54,8 +57,12 @@ Originally published as 'PSecies composition and abundance of mammalian communit
 
 This is the largest summary  of ecological communities for mammals.  This brings the individual species into functional interactive communities.  7977 records that indicate the presence and, for a subset of the records, the abundance of mammal species, including representatives across trophic groups and size classes but excluding bats, documented at 1000 sites throughout the world, encompassing a variety of habitats. Great granularity as well. Key features are it lists mammalian communities  with all mammalian species, their long/latitude and year (cross reference to  NDGAIN), and habitat. 
 
-  
-  
+####  Effects of biodiversity on the functioning of ecosystems:A summary of 164 experimental manipulations of species richness
+
+A summary database of 164 expirements manipulating the species composition of real world biological communities.  It has some sparseness (columms from 1-72 for the number of species removed) but it is the best source of expiramental data for forecasting.
+
+ #### Bioclime
+  Bioclimatic variables that are derived from the monthly temperature and rainfall values in order to generate more biologically meaningful variables. too big to post to GIT
   
   
 
