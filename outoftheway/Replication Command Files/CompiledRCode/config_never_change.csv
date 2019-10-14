@@ -1,0 +1,36 @@
+indicator,indicator_old,,category,group,sector,direction,flood,heat,cold,sea,drought,norm,unit,category_direction,group_direction,sector_direction
+Percent of area that is impervious surface,Percent of area that is impervious surface,FS27,Risk,Vulnerability,Sensitivity,1,1,0,0,1,0,0,%,0,1,1
+Percent of population residing in the mobile homes,Percent of population residing in the mobile homes,FS26,Risk,Vulnerability,Sensitivity,1,1,0,0,1,0,0,%,0,1,1
+Percent of population that is 65 years old or older living alone,Percent of population that is 65 years old or older living alone,HCFS 22,Risk,Vulnerability,Sensitivity,1,1,1,1,1,0,0,%,0,1,1
+Percent of population that is 5 years old or younger,Percent of population that is 5 years old or younger,HCFS 24,Risk,Vulnerability,Sensitivity,1,1,1,1,1,0,0,%,0,1,1
+Percent of households without access to a vehicle,Percent of households without access to a vehicle,FS25,Risk,Vulnerability,Sensitivity,1,1,0,0,1,0,0,%,0,1,1
+Number of acute care hospital beds available per 1000 residents,Number of acute care hospital beds available per 1000 residents,HCFS31,Risk,Vulnerability,Adaptive Capacity,1,1,1,1,1,0,0,beds,0,1,0
+Percent of population with health insurance,Percent of population with health insurance,HCFS33,Risk,Vulnerability,Adaptive Capacity,1,1,1,1,1,0,0,%,0,1,0
+Percent of buildings built before 1999,Percent of buildings built before 1999,FS21,Risk,Vulnerability,Sensitivity,1,1,0,0,1,0,0,%,0,1,1
+Percent of Buildings Built Before 1979,Percent of Buildings Built Before 1979,HC21,Risk,Vulnerability,Sensitivity,1,0,1,1,0,0,0,%,0,1,1
+Percent of population spending over 50 percent of income on rent,Percent of population spending over 50 percent of income on rent,HCFS23,Risk,Vulnerability,Sensitivity,1,1,1,1,1,0,0,%,0,1,1
+Outdoor workers,Outdoor workers,H24,Risk,Vulnerability,Sensitivity,1,0,1,1,0,0,0,%,0,1,1
+Percent of land covered by tree canopy,Percent of land covered by tree canopy,H32,Risk,Vulnerability,Adaptive Capacity,1,0,1,0,0,0,0,%,0,1,0
+Percent of houses with heating,Percent of houses with heating,C32,Risk,Vulnerability,Adaptive Capacity,1,0,0,1,0,0,0,%,0,1,0
+Baseline water stress,Baseline water stress,D21,Risk,Vulnerability,Sensitivity,1,0,0,0,0,1,0,Rating Score,0,1,1
+Percentage of workforce in Farming Fishing and Forestry,Percentage of workforce in Farming Fishing and Forestry,D22,Risk,Vulnerability,Sensitivity,1,0,0,0,0,1,0,%,0,1,1
+water quality,water quality,FS32,Risk,Vulnerability,Adaptive Capacity,0,1,0,0,1,0,population,Count of water quality violation,0,1,0
+Existence of drought management plans,Existence of drought management plans,D31,Risk,Vulnerability,Adaptive Capacity,1,0,0,0,0,1,0,,0,1,0
+Existence of water management plan,Existence of water management plan,D31,Risk,Vulnerability,Adaptive Capacity,1,0,0,0,0,1,0,,0,1,0
+city debt,city debt,HCFSD51,Readiness,Readiness,Economic,0,1,1,1,1,1,0,$,1,1,1
+Readiness to accept adaptation investment,Readiness to accept adaptation investment,HCFSD52,Readiness,Readiness,Economic,1,1,1,1,1,1,0,Moody's Rating,1,1,1
+Tax incentives for renewable energy,Tax incentives for renewable energy,HCFSD53,Readiness,Readiness,Economic,1,1,1,1,1,1,0,Number of tax incentive programs ,1,1,1
+Total number of federal public corruption convictions by district,Total number of federal public corruption convictions by district,HCFSD63,Readiness,Readiness,Governance,0,1,1,1,1,1,population,Number of total convictions in district,1,1,1
+Civic Engagement,Civic Engagement,HCFSD41,Readiness,Readiness,Social,1,1,1,1,1,1,0,Voters/population 18 years and older,1,1,1
+Percent of population with a 12th grade education or higher,Percent of population with a 12th grade education or higher,HCFSD61,Readiness,Readiness,Governance,1,1,1,1,1,1,0,%,1,1,1
+General innovation capabilities,General innovation capabilities,HCFSD42,Readiness,Readiness,Social,1,1,1,1,1,1,0,Patent/capita,1,1,1
+Estimated percent of adults who think global warming is already harming people in the US now or within 10 years,Estimated percent of adults who think global warming is already harming people in the US now or within 10 years,HCFSD62,Readiness,Readiness,Governance,1,1,1,1,1,1,0,%,1,1,1
+Percent of cars in floodzone,Percent of cars in floodzone,F12,Risk,Exposure,Exposure,1,1,0,0,0,0,0,%,1,1,1
+Percent of Population in Floodzone,Percent of Population in Floodzone,F11,Risk,Exposure,Exposure,1,1,0,0,0,0,0,%,1,1,1
+Percent of Buildings in Floodzone,Percent of Buildings in Floodzone,F13,Risk,Exposure,Exposure,1,1,0,0,0,0,0,%,1,1,1
+Population density,Population density,HCD11,Risk,Exposure,Exposure,1,0,1,1,0,1,0,people/sq KM,1,1,1
+Percent of population in 1ft sea level rise zone,Percent of population in 1ft sea level rise zone,S11,Risk,Exposure,Exposure,1,0,0,0,1,0,0,%,1,1,1
+Percent of population in 3ft sea level rise zone,Percent of population in 3ft sea level rise zone,S12,Risk,Exposure,Exposure,1,0,0,0,1,0,0,%,1,1,1
+Percent of GDP based on water intensive industries,Percent of GDP based on water intensive industries,D23,Risk,Vulnerability,Sensitivity,1,0,0,0,0,1,0,%,1,1,1
+Percent of Population in Poverty,Percent of Population in Poverty,HC27,Risk,Vulnerability,Sensitivity,1,0,1,1,0,0,0,%,1,1,1
+Percent of Population with a disability,Percent of Population with a disability,HC26,Risk,Vulnerability,Sensitivity,1,0,1,1,0,0,0,%,1,1,1

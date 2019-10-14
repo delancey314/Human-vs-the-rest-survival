@@ -1,0 +1,71 @@
+
+## Note: The working directory must be changed to be consistant with directory on the running machine ##
+setwd("C:/Users/yxu6/uaa_index/CompiledRCode")
+
+library(dplyr)
+data0 = read.csv("MasterUAA_formated_10_18.csv")
+data0[,23] = 100 - data0[,23]
+colnames(data0)[23] = "Percent of population with a 12th grade education or higher_2015"
+colnamesArray = colnames(data0)
+colnamesArray
+priorColnames = colnamesArray[12:50]
+
+modification = gsub('.{5}$','', priorColnames)
+modification = gsub('_','.',modification)
+
+augmentedColnames = c()
+for ( i in 1:length(modification))
+{
+  augmentedColnames = c(augmentedColnames, paste0(modification[i],'_',2010:2015))
+  
+}
+
+priorColnames = gsub('_201','.201', priorColnames) 
+priorColnames = gsub("_",".", priorColnames)
+priorColnames = gsub(".201", "_201", priorColnames)
+colnames(data0)[12:50] = priorColnames
+
+newData = as.data.frame(matrix(0, 0, length(augmentedColnames) + 11))
+colnames(newData) = c( colnames(data0)[1:11], augmentedColnames)
+newData[,1:11] =  data0[,1:11]
+trial = merge(data0, newData,  all.x = T, all.y = F)[,sort(union(names(data0), names(newData)))]
+## write.csv(trial, "trial.csv")
+trial[is.na(trial)] = ""
+dim(trial)
+
+colnames(trial) =  gsub("."," ", colnames(trial), fixed = T)
+colnames(trial)
+modification = gsub("."," ", modification, fixed = T)
+basic = trial %>% select(City,State,'Geo ID')
+colnames(basic) = c('city', 'state','geo.id')
+
+
+dir.create("index", showWarnings = FALSE)
+setwd("./index")
+
+
+library(stringr)
+for ( i in modification[-c(32,37:39)] )
+  {
+  new_indicator = trial %>% select(contains(i,ignore.case = F))
+  indicator_export = cbind(basic, new_indicator)
+  if(!dir.exists(i)){
+  dir.create(i)
+  }
+  colnames(indicator_export)[4:9] = str_sub(colnames(indicator_export)[4:9], -4)
+  write.csv(indicator_export, file = paste0("./",i,"/", "raw_origin.csv"), row.names = F)
+}
+
+updated_version = trial %>% select(gsub('.', ' ',colnamesArray[1:11], fixed = T))
+updated_version[is.na(updated_version)] = ""
+for ( i in modification[-32])
+{
+  print(i)
+  new_indicator = trial %>% select(contains(i, ignore.case = F))
+  updated_version = cbind(updated_version, new_indicator)
+  
+}
+
+sort(colnames(updated_version))
+write.csv(updated_version, "Updated_MasterUAA_formated.csv", row.names = F)
+
