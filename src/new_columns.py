@@ -16,45 +16,62 @@
     'pop_2014'	'pop_2015'	'median_income']
 
 civ_engage = perc_vote
-calc_from_raw =pd.Dataframe()
-calc_from_raw ['city_pop_c']=city_indicators['pop_2015']
 
 '''
-    I am recalculating the oroginal study's variables to see if they match.
-    They are being stored in a separate data frams, calc_from_raw. Each variable
-    is appended with a '_c' to distinguish it from the study's calculations.'
+    Due to issues with the raw data, I am recalculating.
+    They are being stored in a separate data frame, calc_from_raw to identify them as 
+    check. Each variable is appended with a '_c' to distinguish it from the study's calculations.'
+
+The original study calculates  economic, and governance the same
+for all hazards. Only one variable (flood) has a different exposure. Therefore, a universal 
+variable will be created to represent these categories in the new setr.s
 '''
+
+
+# universal formulas
+calc_from_raw =pd.Dataframe()
+
+calc_from_raw['econ_c']=city_indicators['debt']+city_indicators['invest']+city_indicators['tax_break']
+calc_from_raw['gov_c']=city_indicators['innovate']+city_indicators['climate_real']
+calc_from_raw['social_c']=city_indicators['corruption']+city_indicators['perc_vote']
+#make sure to use flood_expos for flood. Use this one for the rest
+calc_from_raw ['expos_c']=city_indicators['pop_2015']
+
 #heat - adaption and sensitivity formulas unique
-calc_from_raw['heat_expos_c']=city_indicators['pop_2015']
-calc_from_raw['heat_social_c']=city_indicators['corruption']+city_indicators['perc_vote']
 calc_from_raw['heat_adapt_c']=city_indicators['beds_1000']+city_indicators['trees']]
 calc_from_raw['heat_sens_c']=city_indicators['alone_65']+city_indicators['poverty']+city_indicators['disabled']
-calc_from_raw['heat_econ_c']=city_indicators['debt']+city_indicators['invest']+city_indicators['tax_break']
-calc_from_raw['heat_gov_c']=city_indicators['innovate']+city_indicators['climate_real']
 
 #cold - adaption and sensitivity formulas unique
-calc_from_raw['cold_expos']=city_indicators['pop_2015']
-calc_from_raw['cold_social_c']=city_indicators['corruption']+city_indicators['perc_vote']
 calc_from_raw['cold_adapt_c']=city_indicators['beds_1000']+city_indicators['heating']
 calc_from_raw['cold_sens_c']=city_indicators['alone_65']+city_indicators['work_outside']+city_indicators['child_5']
-calc_from_raw['cold_econ_c']=city_indicators['debt']+city_indicators['invest']+city_indicators['tax_break']
-calc_from_raw['cold_gov_c']=city_indicators['innovate']+city_indicators['climate_real']
-
-
 
 #flood - exposure, sensitivity and adaption formulas unique
 calc_from_raw['flood_expos']=city_indicators['flood_pop']+city_indicators['flood_build']
-calc_from_raw['flood_social_c']=city_indicators['corruption']+city_indicators['perc_vote']
 calc_from_raw['flood_sens_c']=city_indicators['older_1999']+city_indicators['mobile_home']
 calc_from_raw['flood_adapt_c']=city_indicators['beds_1000']+city_indicators['w_quality']
+
+
+#drought - sensitivity and adaption unique
+calc_from_raw['drought_sens_c']=city_indicators['GDP_water_all']+city_indicators['perc_fff']
+calc_from_raw['drought_adapt_c']=city_indicators['d_plan']+city_indicators['w_plan']
+
+
+'''
+individual versions in case they are needed.
+
+calc_from_raw['heat_expos_c']=city_indicators['pop_2015']
+calc_from_raw['heat_econ_c']=city_indicators['debt']+city_indicators['invest']+city_indicators['tax_break']
+calc_from_raw['heat_gov_c']=city_indicators['innovate']+city_indicators['climate_real']
+calc_from_raw['heat_social_c']=city_indicators['corruption']+city_indicators['perc_vote']
+calc_from_raw['cold_expos']=city_indicators['pop_2015']
+calc_from_raw['cold_social_c']=city_indicators['corruption']+city_indicators['perc_vote']
+calc_from_raw['cold_econ_c']=city_indicators['debt']+city_indicators['invest']+city_indicators['tax_break']
+calc_from_raw['cold_gov_c']=city_indicators['innovate']+city_indicators['climate_real']
+calc_from_raw['flood_social_c']=city_indicators['corruption']+city_indicators['perc_vote']
 calc_from_raw['flood_econ_c']=city_indicators['debt']+city_indicators['invest']+city_indicators['tax_break']
 calc_from_raw['flood_gov_c']=city_indicators['innovate']+city_indicators['climate_real']
-
-
-#drought
 calc_from_raw['drought_expos']=city_indicators['pop_2015']
-social	corruption+civ_engage
-sens	  Percentage_of_workforce_in_Farming__Fishing_and_Forestry_2015+Percent_of_GDP_based_on_water_intensive_industries
-adapt	Existence_of_drought_management_plans_2015+Existence_of_water_management_plan_2015
-econ	debt+bond_worth+incentives_energy
-governance	patents+global_warming
+calc_from_raw['drought_social_c']=city_indicators['corruption']+city_indicators['perc_vote']
+calc_from_raw['drought_econ_c']=city_indicators['debt']+city_indicators['invest']+city_indicators['tax_break']
+calc_from_raw['drought_gov_c']=city_indicators['innovate']+city_indicators['climate_real']
+'''
