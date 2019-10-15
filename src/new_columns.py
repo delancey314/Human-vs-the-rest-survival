@@ -23,11 +23,34 @@ calc_from_raw ['city_pop']=city_indicators['pop_2015']
 #heat
 calc_from_raw['heat_expos']=city_indicators['pop_2015']
 
+social	corruption+civ_engage
+sens	aone_65 + disability+poverty
+adapt	hosp_beds+tree_canopy
+econ	debt+bond_worth+incentives_energy
+governance	patents+global_warming
+
 #cold
 calc_from_raw['cold_expos']=city_indicators['pop_2015']
+expo	city_pop
+social	corruption+civ_engage
+sens	alone_65 + out_work+young_5
+adapt	hosp_beds+no_heat
+econ	debt+bond_worth+incentives_energy
+governance	patents+global_warming
 
 #flood
 calc_from_raw['flood_expos']=city_indicators['flood_pop']+city_indicators['flood_build']
+expo	floodzone_pop+floodzone_build
+social	corruption + civ_engage
+sens	build_1999+mobile_home
+adapt	hosp_beds+water_quality
+econ	debt+incentives_energy
+governance	patents+global_warming
 
 #drought
 calc_from_raw['drought_expos']=city_indicators['pop_2015']
+social	corruption+civ_engage
+sens	  Percentage_of_workforce_in_Farming__Fishing_and_Forestry_2015+Percent_of_GDP_based_on_water_intensive_industries
+adapt	Existence_of_drought_management_plans_2015+Existence_of_water_management_plan_2015
+econ	debt+bond_worth+incentives_energy
+governance	patents+global_warming
