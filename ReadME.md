@@ -14,9 +14,19 @@ Climate Change is upon Us
 (insert picture here)
 
 This rise is expected to have significant impact on human life
-
+(insert picture 2 here)
 Furthermore, the risks are increasing.  The Arctic permafrost holds 1600 billion tons of CO2 and methane - twice what is currently in the atmosphere.  This year, multiple studies have been released showing the permafrost will be completely melted sometime between 2030 and 2040. This example from Russia shows that when melting begins, entire hills can be quickly lost.
 
-The earth's natural defense to events to rising CO2 is the carbon sinks in forests, particularly the Amazon Rainforest.  In August 2019 alone, 
+(hole picture)
+The earth's natural defense to events to rising CO2 is the carbon sinks in forests, particularly the rainforest.  Due to drought and human deforestation, these sources are burning. In August 2019 alone, there was an estimated 26,000 fires in the Amazon.  Today (Oct 18,2019), there are 17 large fires in 9  states with 247,00 acres on fire
+(Indonesia Fire)
+
+## Theme of this Project
+
+##### This project is going to try and predict the risk to major US cities and how prepared they are to handle it.  
+
+### How to predict Risk and Readiness
+
+The Notre Dame Global Adaptation Initiative (ND-GAIN) is leading a global initiative to gather data needed for United Nations Members to make decisions for their couunty. As a subproject of this initiative,  
 
 
