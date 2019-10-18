@@ -80,6 +80,8 @@ class UAAPipeline(self,filename):
             
     
     def clean(self):
+        #method unfinished.  MOre will be added for the other files
+
         #Puerto Rico is being dropped at rows [19, 35, 193, 220] because of data inconsistency
         self.work_file.drop([19, 35, 193, 220], inplace = True)
         if self.filename == 'city':
@@ -108,7 +110,6 @@ class UAAPipeline(self,filename):
         elif self.filename == 'risk':
             self.work_file['overall_readiness'] = np.where(self.work_file['overall_readiness']>=.4651, 1, 0)
             self.work_file['overall_risk'] = np.where(self.work_file['overall_risk']>=.3840, 1, 0)
-            self.work_file['overall_readiness'] = np.where(self.work_file['overall_readiness']>=.4651, 1, 0)
             self.work_file['risk_ready_cat']=self.work_file.apply(lambda row: categorize_(row), axis=1)
             cities=self.work_file['city']
             cities.to_csv('../data/transformed_data/cities.csv')
@@ -121,12 +122,15 @@ class UAAPipeline(self,filename):
             return self.work_file
         elif self.filename == 'drought':
             self.work_file.to_csv('../data/raw_data/Drought Data.csv')
+            return self.work_file
         elif self.filename == 'flood':   
             self.work_file.to_csv('../data/raw_data/Flood Data.csv')
+            return self.work_file
         elif self.filename == 'heat':   
             self.work_file.to_csv('../data/raw_data/Heat Data.csv')
         elif self.filename == 'risk':
             self.work_file.to_csv('../data/raw_data/Overall Risk & Readiness Scores.csv')
+            return self.work_file
         elif self.filename == 'coastal':
             self.work_file.to_csv('../data/raw_data/Sea Level Rise Data.csv')
         else:
@@ -153,5 +157,4 @@ class UAAPipeline(self,filename):
         rename()
         clean()
         create_columns()
-        return output_file
-        pass
+        write_and_return()
