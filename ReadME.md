@@ -10,7 +10,8 @@
 Climate Change is upon Us
  
  There is extensive evidence that climate change is upon us.  Last year, the United Nations Intergovernmental Panel on Climate Change (IPCC) released their report showing we are likely to cross the threshold of 1.5 C by 2040. This is a critical threshold is theorized to be a point of no return.
-
+ 
+![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/IHCC%20Predicted%20Change.JPG "IPCC predicted change")
 (insert picture here)
 
 This rise is expected to have significant impact on human life
