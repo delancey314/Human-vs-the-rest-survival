@@ -17,10 +17,10 @@ Climate Change is upon Us
 This rise is expected to have significant impact on human life
 ![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/IHCC%20Predicted%20Change.JPG "IPCC predicted impact")
 Furthermore, the risks are increasing.  The Arctic permafrost holds 1600 billion tons of CO2 and methane - twice what is currently in the atmosphere.  This year, multiple studies have been released showing the permafrost will be completely melted sometime between 2030 and 2040. This example from Russia shows that when melting begins, entire hills can be quickly lost.
-![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/Batagaika%20crater.JPG "Batagaika crater"
+![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/Batagaika%20crater.JPG "Batagaika crater")
 
 The earth's natural defense to rising CO2 is the carbon sinks in forests.  Due to drought and human deforestation, these sources are burning. In August 2019 alone, there was an estimated 26,000 fires in the Amazon.  Today (Oct 18,2019), there are 17 large fires in 9  states with 247,00 acres on fire
-![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/Indonesian%20fire.JPG 'Indonesia Fire")
+!![alt text]](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/Indonesian%20fire.JPG "Indonesia Fire")
 
 ## Theme of this Project
 
@@ -78,6 +78,9 @@ Results:
 
     Traditional TrainTestSplit-RandomForestClassifier
     
+    
+    
+    OneVsRestClassifier(AdaBoostClassifier(
 
  adaboosted(X,y) :
      #ada boost mean accuracy= 0.7285714285714285
@@ -90,7 +93,9 @@ Results:
 
 
 
-
+1.1,  ada boost mean accuracy= 0.7285714285714285
+1.09  ada boost mean accuracy= 0.6928571428571428
+1.11  ada boost mean accuracy= 0.6714285714285715
 
 sss_rf mean accuracy= 0.7428571428571428
 [3 2 2 1 3 2 3 4 4 4 1 3 3 1 1 3 1 3 2 3 2 2 4 2 4 4 3 2]
