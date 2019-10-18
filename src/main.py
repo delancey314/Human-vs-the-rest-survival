@@ -1,20 +1,16 @@
 import numpy as np 
 import pandas as pd 
 import UAAPipeline
-from collections import defaultdict
 import matplotlib.pyplot as plt
-
 from xgboost import XGBClassifier
 from sklearn.model_selection import StratifiedShuffleSplit
+
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn import metrics
-
-import numpy as np
 from scipy import interp
-import matplotlib.pyplot as plt
-
-from sklearn import svm, datasets
+from sklearn import svm
 from sklearn.metrics import roc_curve, auc
+import pickle
 
 pd.options.display.max_columns = None
 
@@ -30,20 +26,28 @@ sea_level_data=pd.read_csv('data/raw_data/Sea Level Rise Data.csv')
 
 pipe=UAAPipeline()
 
-def
+def make_X_y(df_to_split):
+    create_X= df_to_split.drop(columns=['risk_ready_cat'])
+    create_y=df_to_split['risk_ready_cat']
+    tree_features=df_to_split.columns
+    create_y.to_csv('data/transformed_data/classification_labels.csv')
+    create_X.to_csv('data/transformed_data/classification_data.csv')
+    tree_features.to_csv('data/transformed_data/classification_features.csv')
+
 
 
 
 if __name__ == "__main__":
+    pipe=UAAPipeline()
     risk_readiness=pipe.make_file('risk')
     city_indicators=pipe.make_file('city')
+
+    feature_name_dict=pipe.get_feature_names()
+
+    tree_data,tree_targets=make_X_y(city_indicators)
     
+
+
+
     
-    
-    trees_cat=city_ind['risk_ready_cat']
-trees_data = city_ind.drop(columns=['risk_ready_cat'])
-tree_features=trees_data.columns
-trees_cat.to_csv('data/transformed_data/classification_labels.csv')
-trees_data.to_csv('data/transformed_data/classification_data.csv')
-tree_feature.to_csv('data/transformed_data/classification_features.csv')
     pass
