@@ -18,8 +18,8 @@ The earth's natural defense to rising CO2 is the carbon sinks in forests.  Due t
 ## Theme of this Project
 
 ##### This project is going to try and predict the risk to major US cities and how prepared they are to handle it.  
-	Part 1 = Test against the published model to see how accurately I can match their results.
-	Part 2 = Tr
+	Part 1 = Test against the published model to see how accurately I can match their results by doing a Decision Tree analysis of their 4 classes. 
+	Part 2 =  Redo their calculations
 
 ### How to predict Risk and Readiness
 
@@ -47,10 +47,10 @@ City Indicators	52	278
 ## Published Dataset
 ![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/RIsk_Readiness%20Explained.JPG "Summary")
 
-![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/UAA%20Grid.JPG "RR grid)
+![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/UAA%20Grid.JPG"RR grid")
 
 
-![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/Formulas.JPG 'Formulas')																
+![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/Formulas.JPG "Formulas")																
 ## EDA		
 
 ![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/Risk-Readiness%20High-Low.JPG "high_low'")
@@ -114,8 +114,10 @@ The most interesting thing for this model is the sensitivity of the learning rat
  ###  Feature Importance
  Feature importance was avialable for the most simple Adaboost and Random Forest.  The features that showed up in both 10 ten are marked green.  The features related to population density are highlighted in yellow.  For both models, the population and city area both show as zeros or the lowest values (32nd on the right) while Population Density is one of the highest
 ![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/feature%20Extraction.JPG "features")
+
+
 Inability to produce ROC curves.  
 
-![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/ROC%20curves.JPG 'ROC Curves")
+![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/ROC%20curves.JPG "ROC Curves")
 
 	
