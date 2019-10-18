@@ -47,7 +47,7 @@ City Indicators	52	278
 ## Published Dataset
 ![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/RIsk_Readiness%20Explained.JPG "Summary")
 
-![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/UAA%20Grid.JPG"RR grid")
+![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/UAA%20Grid.JPG "Grid")
 
 
 ![alt text](https://github.com/delancey314/US-City-Climate-Change-Risk-and-Readiness/blob/master/images/Formulas.JPG "Formulas")																
